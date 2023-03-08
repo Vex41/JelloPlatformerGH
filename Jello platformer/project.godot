@@ -17,7 +17,7 @@ config/icon="res://icon.png"
 [autoload]
 
 HealthUi="*res://Codes/HealthUI.gd"
-Player="*res://Scenes/Player.tscn"
+Player="res://Scenes/Player.tscn"
 
 [display]
 

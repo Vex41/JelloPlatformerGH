@@ -1,9 +1,14 @@
 extends Node2D
 
 var vulnerable = true #makes it so tha you don't lose ALL your health instantly
-var health = 7
+var health = 6
 
-func _on_hit_detection_body_entered(body): #when a hit is detected
+func _on_Timer_timeout(): #makes the player vulnerable to damage
+	vulnerable = true
+	print("vulnerable")
+	print(health)
+
+func _on_Area2D_area_entered(_area):
 	if vulnerable == true:
 		health = health - 1
 		$Timer.start()
@@ -37,9 +42,3 @@ func _on_hit_detection_body_entered(body): #when a hit is detected
 		$Heart2.set_frame(2)
 		$Heart3.set_frame(2)
 		get_tree().quit()
-
-func _on_Timer_timeout(): #makes the player vulnerable to damage
-	vulnerable = true
-	print("vulnerable")
-	print(health)
-

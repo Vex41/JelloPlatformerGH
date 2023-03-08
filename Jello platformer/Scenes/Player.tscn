@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Codes/Player.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Characters/spritesheet.png" type="Texture" id=2]
@@ -129,9 +129,6 @@ tracks/0/keys = {
 [sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 10, 12 )
 
-[sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 11, 12.5 )
-
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 1 )
 
@@ -171,20 +168,3 @@ shape = SubResource( 8 )
 
 [node name="HealthUI" parent="." instance=ExtResource( 7 )]
 light_mask = 4
-position = Vector2( -25, -32 )
-
-[node name="Timer" type="Timer" parent="HealthUI"]
-wait_time = 2.0
-
-[node name="hit detection" type="Area2D" parent="HealthUI"]
-light_mask = 4
-position = Vector2( 25, 32 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HealthUI/hit detection"]
-modulate = Color( 0, 0, 0, 1 )
-light_mask = 4
-position = Vector2( 0, -0.5 )
-shape = SubResource( 6 )
-
-[connection signal="timeout" from="HealthUI/Timer" to="HealthUI" method="_on_Timer_timeout"]
-[connection signal="body_entered" from="HealthUI/hit detection" to="HealthUI" method="_on_hit_detection_body_entered"]
