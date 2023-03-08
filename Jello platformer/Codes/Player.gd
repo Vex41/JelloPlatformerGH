@@ -7,13 +7,11 @@ const Maxspeed = 80
 const Jumpforce = 400
 const Accel = 10
 
-var Jumped = false
+var Jumped = true
 var motion = Vector2()
 var facingright = false
 
-
-
-func _physics_process(delta):
+func _physics_process(_delta):
 	
 	motion.y += Gravity #Gravity handler
 	if motion.y > Maxfallspeed:
@@ -49,6 +47,7 @@ func _physics_process(delta):
 	
 	if is_on_floor(): #plays the noise when you hit the ground. Maybe need to change the noise though
 		if Jumped == true:
+			$AnimationPlayer.play("walk")
 			$Land.play()
 			Jumped = false
 		
@@ -57,8 +56,10 @@ func _physics_process(delta):
 			motion.y = -Jumpforce
 			$Jump.play()
 	
+	if !is_on_floor():
+		$AnimationPlayer.play("Jump")
+	
+	if Input.is_action_pressed("reset"):
+		get_tree().reload_current_scene()
+	
 	motion = move_and_slide(motion, Up)
-
-
-func _on_VisibilityNotifier2D_screen_exited():
-	get_tree().reload_current_scene() #reset the world if fallen off the screen

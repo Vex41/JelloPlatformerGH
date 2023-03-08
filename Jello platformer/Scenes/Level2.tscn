@@ -1,0 +1,94 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Scenes/Blocks/Leftblock.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Blocks/Middleblock.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Blocks/Rightblock.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Blocks/Backround stuff.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Blocks/Door.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Codes/Level2.gd" type="Script" id=7]
+[ext_resource path="res://Sprites/Misc blocks/tile_0124.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Misc blocks/tile_0126.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Misc blocks/tile_0088.png" type="Texture" id=10]
+[ext_resource path="res://Scenes/Blocks/Coin.tscn" type="PackedScene" id=11]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 8, 8 )
+
+[node name="Level2" type="Node2D"]
+
+[node name="Backround stuff" parent="." instance=ExtResource( 4 )]
+
+[node name="blocks" type="Node2D" parent="."]
+
+[node name="Leftblock" parent="blocks" instance=ExtResource( 1 )]
+position = Vector2( 40, 136 )
+
+[node name="Middleblock" parent="blocks" instance=ExtResource( 2 )]
+position = Vector2( 56, 136 )
+
+[node name="Rightblock" parent="blocks" instance=ExtResource( 3 )]
+position = Vector2( 72, 136 )
+
+[node name="Leftblock2" parent="blocks" instance=ExtResource( 1 )]
+position = Vector2( 128, 136 )
+
+[node name="Middleblock2" parent="blocks" instance=ExtResource( 2 )]
+position = Vector2( 144, 136 )
+
+[node name="Rightblock2" parent="blocks" instance=ExtResource( 3 )]
+position = Vector2( 160, 136 )
+
+[node name="Leftblock3" parent="blocks" instance=ExtResource( 1 )]
+position = Vector2( 216, 136 )
+
+[node name="Middleblock3" parent="blocks" instance=ExtResource( 2 )]
+position = Vector2( 232, 136 )
+
+[node name="Rightblock3" parent="blocks" instance=ExtResource( 3 )]
+position = Vector2( 248, 136 )
+
+[node name="Leftblock4" parent="blocks" instance=ExtResource( 1 )]
+position = Vector2( 296, 136 )
+
+[node name="Middleblock4" parent="blocks" instance=ExtResource( 2 )]
+position = Vector2( 312, 136 )
+
+[node name="Rightblock4" parent="blocks" instance=ExtResource( 3 )]
+position = Vector2( 328, 136 )
+
+[node name="Door" parent="blocks" instance=ExtResource( 6 )]
+position = Vector2( 312, 118 )
+
+[node name="Tile0088" type="Sprite" parent="blocks"]
+position = Vector2( 74, 119 )
+scale = Vector2( 0.888889, 0.888889 )
+texture = ExtResource( 10 )
+
+[node name="Tile0126" type="Sprite" parent="blocks"]
+position = Vector2( 133, 119 )
+scale = Vector2( 0.888889, 0.888889 )
+texture = ExtResource( 9 )
+
+[node name="Tile0124" type="Sprite" parent="blocks"]
+position = Vector2( 239, 123 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 8 )
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 312, 118 )
+shape = SubResource( 1 )
+
+[node name="Player" parent="." instance=ExtResource( 5 )]
+position = Vector2( 56, 104 )
+
+[node name="Coin" parent="." instance=ExtResource( 11 )]
+position = Vector2( 145, 114 )
+
+[node name="Coin2" parent="." instance=ExtResource( 11 )]
+position = Vector2( 233, 112 )
+
+[connection signal="area_entered" from="Area2D" to="Area2D" method="_on_Area2D_area_entered"]

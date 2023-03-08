@@ -1,13 +1,30 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Codes/Player.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Characters/spritesheet.png" type="Texture" id=2]
 [ext_resource path="res://Sounds/Jump.wav" type="AudioStream" id=3]
 [ext_resource path="res://Sounds/Fallen off map.wav" type="AudioStream" id=4]
 [ext_resource path="res://Sounds/Land.wav" type="AudioStream" id=5]
+[ext_resource path="res://Sounds/footstep.wav" type="AudioStream" id=6]
 
 [sub_resource type="CapsuleShape2D" id=1]
 height = 4.0
+
+[sub_resource type="Animation" id=7]
+resource_name = "Death"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false, true ]
+}
 
 [sub_resource type="Animation" id=5]
 resource_name = "Jump"
@@ -38,6 +55,42 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../step:stream")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ ExtResource( 6 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../step:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
 }
 
 [sub_resource type="Animation" id=4]
@@ -72,6 +125,9 @@ tracks/0/keys = {
 "values": [ 1, 0 ]
 }
 
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 10, 12 )
+
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 1 )
 
@@ -84,16 +140,18 @@ shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../Sprite")
+anims/Death = SubResource( 7 )
 anims/Jump = SubResource( 5 )
 anims/RESET = SubResource( 2 )
 anims/idle = SubResource( 4 )
 anims/walk = SubResource( 3 )
 
+[node name="step" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 6 )
+volume_db = 1.0
+
 [node name="Jump" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 3 )
-
-[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
-position = Vector2( 0, 24 )
 
 [node name="Off-map" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 4 )
@@ -101,4 +159,7 @@ stream = ExtResource( 4 )
 [node name="Land" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 5 )
 
-[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 6 )
