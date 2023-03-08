@@ -55,6 +55,9 @@ texture = ExtResource( 6 )
 position = Vector2( 232, 240 )
 texture = ExtResource( 9 )
 
+[node name="Coin" parent="blocks" instance=ExtResource( 10 )]
+position = Vector2( 167, 207 )
+
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource( 8 )
 
@@ -64,8 +67,5 @@ shape = SubResource( 1 )
 
 [node name="Player" parent="." instance=ExtResource( 5 )]
 position = Vector2( 248, 232 )
-
-[node name="Coin" parent="." instance=ExtResource( 10 )]
-position = Vector2( 167, 207 )
 
 [connection signal="area_entered" from="Area2D" to="Area2D" method="_on_Area2D_area_entered"]

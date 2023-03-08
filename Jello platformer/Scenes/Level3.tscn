@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Codes/Level3.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Blocks/Leftblock.tscn" type="PackedScene" id=2]
@@ -13,6 +13,9 @@
 [ext_resource path="res://Sprites/Misc blocks/tile_0125.png" type="Texture" id=11]
 [ext_resource path="res://Sprites/Misc blocks/tile_0127.png" type="Texture" id=12]
 [ext_resource path="res://Scenes/Blocks/Coin.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Sprites/Misc blocks/tile_0153.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Misc blocks/tile_0155.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Misc blocks/tile_0145.png" type="Texture" id=16]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 8, 8 )
@@ -88,6 +91,24 @@ position = Vector2( 152, 230.25 )
 scale = Vector2( 1, 0.972223 )
 texture = ExtResource( 12 )
 
+[node name="Coin" parent="blocks" instance=ExtResource( 13 )]
+position = Vector2( 168, 228 )
+
+[node name="Coin2" parent="blocks" instance=ExtResource( 13 )]
+position = Vector2( 348, 191 )
+
+[node name="Tile0153" type="Sprite" parent="blocks"]
+position = Vector2( 41, 79 )
+texture = ExtResource( 14 )
+
+[node name="Tile0155" type="Sprite" parent="blocks/Tile0153"]
+position = Vector2( 18, 0 )
+texture = ExtResource( 15 )
+
+[node name="Tile0145" type="Sprite" parent="blocks"]
+position = Vector2( 49, 62 )
+texture = ExtResource( 16 )
+
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource( 1 )
 
@@ -101,8 +122,4 @@ position = Vector2( 256, 216 )
 [node name="Player" parent="." instance=ExtResource( 7 )]
 position = Vector2( 72, 240 )
 
-[node name="Coin" parent="." instance=ExtResource( 13 )]
-position = Vector2( 168, 228 )
-
-[node name="Coin2" parent="." instance=ExtResource( 13 )]
-position = Vector2( 348, 191 )
+[connection signal="area_entered" from="Area2D" to="Area2D" method="_on_Area2D_area_entered"]

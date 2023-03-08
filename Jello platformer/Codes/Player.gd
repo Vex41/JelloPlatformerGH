@@ -57,7 +57,7 @@ func _physics_process(_delta):
 			$Jump.play()
 	
 	if !is_on_floor():
-		$AnimationPlayer.play("Jump")
+		$AnimationPlayer.play("Jump") #makes the sprite stay in the jump frame till it's on the floor
 	
 	if Input.is_action_pressed("reset"):
 		get_tree().reload_current_scene()
