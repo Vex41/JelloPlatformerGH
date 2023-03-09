@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/Fallen off map.wav-8cb6936d884d892a12c41985fb1cec75.sample"
+type="AudioStreamWAV"
+uid="uid://c7xiihq63khvo"
+path="res://.godot/imported/Fallen off map.wav-8cb6936d884d892a12c41985fb1cec75.sample"
 
 [deps]
 
 source_file="res://Sounds/Fallen off map.wav"
-dest_files=[ "res://.import/Fallen off map.wav-8cb6936d884d892a12c41985fb1cec75.sample" ]
+dest_files=["res://.godot/imported/Fallen off map.wav-8cb6936d884d892a12c41985fb1cec75.sample"]
 
 [params]
 

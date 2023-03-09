@@ -1,0 +1,97 @@
+2a60927148abd1d33b818b535e306557
+::res://::1678378176
+Control.tscn::PackedScene::-1::1678377704::0::1::::<><>::res://new_theme.tres
+default_env.tres::Environment::5664337125458024675::1678378152::0::1::::<><>::
+export_presets.cfg::TextFile::-1::1678312208::0::1::::<><>::
+icon.png::CompressedTexture2D::7657714395114179058::1678237500::1678377807::1::::<><>::
+::res://Codes/::1678378050
+Coin.gd::GDScript::-1::1678377704::0::1::::<>StaticBody2D<>::
+Enemy fish.gd::GDScript::-1::1678377704::0::1::::<>CharacterBody2D<>::
+HealthUI.gd::GDScript::-1::1678377704::0::1::::<>Node2D<>::
+Level1.gd::GDScript::-1::1678377704::0::1::::<>Area2D<>::
+Level2.gd::GDScript::-1::1678377704::0::1::::<>Area2D<>::
+Level3.gd::GDScript::-1::1678377704::0::1::::<>Area2D<>::
+Level4.gd::GDScript::-1::1678377704::0::1::::<>Area2D<>::
+Player.gd::GDScript::-1::1678378050::0::1::::<>CharacterBody2D<>::
+::res://Scenes/::1678378152
+Level2.tscn::PackedScene::-1::1678377704::0::1::::<><>::res://Scenes/Blocks/Leftblock.tscn<>res://Scenes/Blocks/Middleblock.tscn<>res://Scenes/Blocks/Rightblock.tscn<>res://Scenes/Blocks/Backround stuff.tscn<>res://Scenes/Player.tscn<>res://Scenes/Blocks/Door.tscn<>res://Codes/Level2.gd<>res://Sprites/Misc blocks/tile_0124.png<>res://Sprites/Misc blocks/tile_0126.png<>res://Sprites/Misc blocks/tile_0088.png<>res://Scenes/Blocks/Coin.tscn
+Level3.tscn::PackedScene::-1::1678377704::0::1::::<><>::res://Codes/Level3.gd<>res://Scenes/Blocks/Leftblock.tscn<>res://Scenes/Blocks/Middleblock.tscn<>res://Scenes/Blocks/Rightblock.tscn<>res://Scenes/Blocks/Backround stuff.tscn<>res://Scenes/Blocks/Door.tscn<>res://Scenes/Player.tscn<>res://Scenes/Enemys/Fish.tscn<>res://Sprites/Misc blocks/tile_0124.png<>res://Sprites/Misc blocks/tile_0088.png<>res://Sprites/Misc blocks/tile_0125.png<>res://Sprites/Misc blocks/tile_0127.png<>res://Scenes/Blocks/Coin.tscn<>res://Sprites/Misc blocks/tile_0153.png<>res://Sprites/Misc blocks/tile_0155.png<>res://Sprites/Misc blocks/tile_0145.png
+Level4.tscn::PackedScene::-1::1678377704::0::1::::<><>::res://Codes/Level4.gd<>res://Sprites/Misc blocks/tile_0128.png<>res://Sprites/Misc blocks/tile_0088.png<>res://Sprites/Misc blocks/tile_0125.png<>res://Scenes/Blocks/Rightblock.tscn<>res://Scenes/Blocks/Door.tscn<>res://Scenes/Blocks/Coin.tscn<>res://Scenes/Enemys/Fish.tscn<>res://Scenes/Player.tscn<>res://Scenes/Blocks/Leftblock.tscn<>res://Scenes/Blocks/Backround stuff.tscn<>res://Scenes/Blocks/Middleblock.tscn
+Player.tscn::PackedScene::660856950693005944::1678378152::0::1::::<><>::res://Codes/Player.gd<>uid://b7kdwrkdfei4b<>uid://byeov6gosbdgk<>uid://c7xiihq63khvo<>uid://burtpm3g1hvhq<>uid://bwse8hap80i1v<>res://Scenes/UI/HealthUI.tscn
+World.tscn::PackedScene::6102446017133029530::1678378152::0::1::::<><>::res://Scenes/Blocks/Backround stuff.tscn<>res://Scenes/Blocks/Leftblock.tscn<>res://Scenes/Blocks/Middleblock.tscn<>res://Scenes/Blocks/Rightblock.tscn<>uid://joehnlxsaheu<>uid://duf44uy0maanf<>res://Scenes/Blocks/Door.tscn<>res://Codes/Level1.gd<>uid://cg0pvgh6tycv0<>res://Scenes/Blocks/Coin.tscn
+::res://Scenes/Blocks/::1678377645
+Backround stuff.tscn::PackedScene::-1::1678377704::0::1::::<><>::res://Sprites/Backround.jpg
+Bottom-Left Block.tscn::PackedScene::-1::1678377704::0::1::::<><>::res://Sprites/Blocks/tile_0005.png
+Bottom-Middle block.tscn::PackedScene::-1::1678377704::0::1::::<><>::res://Sprites/Blocks/tile_0122.png
+Bottom-Right block.tscn::PackedScene::-1::1678377704::0::1::::<><>::res://Sprites/Blocks/tile_0004.png
+Coin.tscn::PackedScene::-1::1678377704::0::1::::<><>::res://Sprites/Misc blocks/Coin.png<>res://Codes/Coin.gd
+Door.tscn::PackedScene::-1::1678377704::0::1::::<><>::res://Sprites/Blocks/tile_0130.png<>res://Sprites/Blocks/tile_0110.png
+Leftblock.tscn::PackedScene::-1::1678377704::0::1::::<><>::res://Sprites/Blocks/tile_0001.png
+Middleblock.tscn::PackedScene::-1::1678377704::0::1::::<><>::res://Sprites/Blocks/tile_0002.png
+Rightblock.tscn::PackedScene::-1::1678377704::0::1::::<><>::res://Sprites/Blocks/tile_0003.png
+Top-Left block.tscn::PackedScene::-1::1678377704::0::1::::<><>::res://Sprites/Blocks/tile_0021.png
+Top-Middle block.tscn::PackedScene::-1::1678377704::0::1::::<><>::res://Sprites/Blocks/tile_0022.png
+Top-Right block.tscn::PackedScene::-1::1678377704::0::1::::<><>::res://Sprites/Blocks/tile_0023.png
+::res://Scenes/Enemys/::1678377645
+Fish.tscn::PackedScene::-1::1678377704::0::1::::<><>::res://Codes/Enemy fish.gd<>res://Sprites/Characters/enemy fish.png
+::res://Scenes/Levels/::1678289458
+::res://Scenes/UI/::1678377645
+HealthUI.tscn::PackedScene::-1::1678377704::0::1::::<><>::res://Codes/HealthUI.gd<>res://Sprites/UI/Health.png
+::res://Sounds/::1678377808
+backround music.mp3::AudioStreamMP3::4220378807619571924::1678238802::1678377807::1::::<><>::
+Fallen off map.wav::AudioStreamWAV::7066865468266623204::1678231543::1678377808::1::::<><>::
+footstep2.wav::AudioStreamWAV::4802638604871363408::1678298281::1678377807::1::::<><>::
+footstep.wav::AudioStreamWAV::3968036210862891105::1678295637::1678377807::1::::<><>::
+Jump.wav::AudioStreamWAV::4080099619745724618::1678231541::1678377807::1::::<><>::
+Land.wav::AudioStreamWAV::3826473061886283498::1678231546::1678377807::1::::<><>::
+::res://Sprites/::1678377807
+Backround.jpg::CompressedTexture2D::8527563051537281988::1678238793::1678377807::1::::<><>::
+::res://Sprites/Blocks/::1678377807
+tile_0000.png::CompressedTexture2D::8812964004633746512::1678225564::1678377807::1::::<><>::
+tile_0001.png::CompressedTexture2D::2369751206260635116::1678225564::1678377807::1::::<><>::
+tile_0002.png::CompressedTexture2D::6526348744766936048::1678225564::1678377807::1::::<><>::
+tile_0003.png::CompressedTexture2D::7062634124003475762::1678225564::1678377807::1::::<><>::
+tile_0004.png::CompressedTexture2D::6473726522591991970::1678225564::1678377807::1::::<><>::
+tile_0005.png::CompressedTexture2D::7698187501433361951::1678225564::1678377807::1::::<><>::
+tile_0021.png::CompressedTexture2D::4437502319253902280::1678225576::1678377807::1::::<><>::
+tile_0022.png::CompressedTexture2D::3349754694983965320::1678225576::1678377807::1::::<><>::
+tile_0023.png::CompressedTexture2D::4720638889292973434::1678225576::1678377807::1::::<><>::
+tile_0110.png::CompressedTexture2D::8950034716365564337::1678235040::1678377807::1::::<><>::
+tile_0122.png::CompressedTexture2D::5429100158108106195::1678227034::1678377807::1::::<><>::
+tile_0130.png::CompressedTexture2D::8189036848120534541::1678235014::1678377807::1::::<><>::
+::res://Sprites/Characters/::1678377807
+character_0009.png::CompressedTexture2D::5083518602598289955::1678225606::1678377807::1::::<><>::
+character_0010.png::CompressedTexture2D::8183873463794361278::1678225606::1678377807::1::::<><>::
+enemy fish.png::CompressedTexture2D::8057948792242338998::1678291975::1678377807::1::::<><>::
+spritesheet.png::CompressedTexture2D::4653329804583094219::1678226093::1678377807::1::::<><>::
+::res://Sprites/Misc blocks/::1678377807
+Coin.png::CompressedTexture2D::1377686302957806338::1678299040::1678377807::1::::<><>::
+tile_0087.png::CompressedTexture2D::5246532457017957243::1678292571::1678377807::1::::<><>::
+tile_0088.png::CompressedTexture2D::2453076988722950598::1678292574::1678377807::1::::<><>::
+tile_0124.png::CompressedTexture2D::1652261097757906182::1678292588::1678377807::1::::<><>::
+tile_0125.png::CompressedTexture2D::3009296057406607205::1678292591::1678377807::1::::<><>::
+tile_0126.png::CompressedTexture2D::4509245895902236076::1678292589::1678377807::1::::<><>::
+tile_0127.png::CompressedTexture2D::3823645833044693740::1678292585::1678377807::1::::<><>::
+tile_0128.png::CompressedTexture2D::8575174482117950111::1678292593::1678377807::1::::<><>::
+tile_0145.png::CompressedTexture2D::6638384523449856370::1678301530::1678377807::1::::<><>::
+tile_0151.png::CompressedTexture2D::3458467292123001567::1678298951::1678377807::1::::<><>::
+tile_0152.png::CompressedTexture2D::8236830563635025973::1678298951::1678377807::1::::<><>::
+tile_0153.png::CompressedTexture2D::2338508797115310995::1678301499::1678377807::1::::<><>::
+tile_0154.png::CompressedTexture2D::7397010287752809398::1678301499::1678377807::1::::<><>::
+tile_0155.png::CompressedTexture2D::6286782182285754431::1678301499::1678377807::1::::<><>::
+::res://Sprites/Numbers/::1678377807
+tile_0170.png::CompressedTexture2D::2431660151831342774::1678225497::1678377807::1::::<><>::
+tile_0171.png::CompressedTexture2D::7856581903446775209::1678225497::1678377807::1::::<><>::
+tile_0172.png::CompressedTexture2D::2845948618073494793::1678225497::1678377807::1::::<><>::
+tile_0173.png::CompressedTexture2D::6869143966351989864::1678225497::1678377807::1::::<><>::
+tile_0174.png::CompressedTexture2D::231611880311141479::1678225497::1678377807::1::::<><>::
+tile_0175.png::CompressedTexture2D::390446360952719283::1678225497::1678377807::1::::<><>::
+tile_0176.png::CompressedTexture2D::4560265782719135582::1678225497::1678377807::1::::<><>::
+tile_0177.png::CompressedTexture2D::1138660185643352468::1678225497::1678377807::1::::<><>::
+tile_0178.png::CompressedTexture2D::5100789182576056138::1678225497::1678377807::1::::<><>::
+tile_0179.png::CompressedTexture2D::7208668073559868868::1678225497::1678377807::1::::<><>::
+::res://Sprites/UI/::1678377807
+Health.png::CompressedTexture2D::1585362348373989595::1678303319::1678377807::1::::<><>::
+tile_0044.png::CompressedTexture2D::2963397711794393707::1678303285::1678377807::1::::<><>::
+tile_0045.png::CompressedTexture2D::221565018004068622::1678303292::1678377807::1::::<><>::
+tile_0046.png::CompressedTexture2D::6520570497696480142::1678303288::1678377807::1::::<><>::

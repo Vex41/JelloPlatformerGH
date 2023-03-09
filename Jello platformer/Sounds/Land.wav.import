@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/Land.wav-53251428b57095f7e45bdc8f085e96ec.sample"
+type="AudioStreamWAV"
+uid="uid://burtpm3g1hvhq"
+path="res://.godot/imported/Land.wav-53251428b57095f7e45bdc8f085e96ec.sample"
 
 [deps]
 
 source_file="res://Sounds/Land.wav"
-dest_files=[ "res://.import/Land.wav-53251428b57095f7e45bdc8f085e96ec.sample" ]
+dest_files=["res://.godot/imported/Land.wav-53251428b57095f7e45bdc8f085e96ec.sample"]
 
 [params]
 

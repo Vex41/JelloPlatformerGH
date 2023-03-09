@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends CharacterBody2D
 
 const Up = Vector2(0,-1)
 const Gravity = 20
@@ -37,11 +37,10 @@ func _physics_process(_delta):
 		motion.x = lerp(motion.x,0,0.2) #smoothens the movment
 	
 	
-	
 	if facingright == true: #changes which what the character is facing
-		$Sprite.scale.x = -1
+		$Sprite2D.scale.x = -1
 	else:
-		$Sprite.scale.x = 1
+		$Sprite2D.scale.x = 1
 	
 	
 	
@@ -62,4 +61,7 @@ func _physics_process(_delta):
 	if Input.is_action_pressed("reset"):
 		get_tree().reload_current_scene()
 	
-	motion = move_and_slide(motion, Up)
+	set_velocity(motion)
+	set_up_direction(Up)
+	move_and_slide()
+	motion = velocity

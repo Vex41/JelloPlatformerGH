@@ -1,10 +1,10 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Sprites/Backround.jpg" type="Texture" id=2]
+[ext_resource path="res://Sprites/Backround.jpg" type="Texture2D" id=2]
 
 [node name="Backround stuff" type="Node2D"]
 
-[node name="backround" type="Sprite" parent="."]
+[node name="backround" type="Sprite2D" parent="."]
 show_behind_parent = true
 position = Vector2( 264, 160 )
 scale = Vector2( 0.527125, 0.523 )
